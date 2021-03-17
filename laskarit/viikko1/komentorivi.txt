@@ -1,0 +1,31 @@
+kurssit
+└── ot2021
+    └── viikko1
+        ├── ot_viikko1
+        │   ├── eka.txt
+        │   ├── kolmas.txt
+        │   ├── stuff
+        │   │   └── jokin.txt
+        │   └── tiedostoja
+        │       ├── file22
+        │       └── file3
+        └── Unicafe
+            ├── pom.xml
+            └── src
+                ├── main
+                │   └── java
+                │       └── com
+                │           └── mycompany
+                │               └── unicafe
+                │                   ├── Kassapaate.java
+                │                   ├── Maksukortti.java
+                │                   └── Paaohjelma.java
+                └── test
+                    └── java
+                        └── com
+                            └── mycompany
+                                └── unicafe
+                                    └── MaksukorttiTest.java
+
+17 directories, 10 files
+
