@@ -11,4 +11,4 @@
 
 **Viikko 2**
 
-[vaatimuusmaarittely.md] (https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/vaatimuusmaarittely.md)
+[vaatimuusmaarittely.md](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/vaatimuusmaarittely.md)
