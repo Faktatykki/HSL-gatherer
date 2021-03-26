@@ -16,7 +16,11 @@
 
 15:15 - 17:45 Tietokannan mahdollisuuksien tutkimista. SQLite implementaatio toteutettu  
 
+*Käytetty aika: 2 h 30 min*  
+
 **25.5**
 
 15:00 - 17:45 Pysäkkien haun toiminnallisuuden luominen ilman aikatauluja. Kummallisen bugin korjaamista asiaan liittyen  
+
+*Käytetty aika: 2 h 15 min*  
 
