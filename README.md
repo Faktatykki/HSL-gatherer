@@ -11,6 +11,6 @@
 
 **Viikko 2**
 
-[vaatimuusmaarittely.md](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/vaatimuusmaarittely.md)
-
-[tuntikirjanpito.md](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/tuntikirjanpito.md)
+[vaatimuusmaarittely.md](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/laskarit/viikko2/vaatimuusmaarittely.md)
+ 
+[tuntikirjanpito.md](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/laskarit/viikko2/tuntikirjanpito.md)
