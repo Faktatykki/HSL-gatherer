@@ -39,9 +39,9 @@ public class TextUI {
             System.out.println("2. Search Stops");
             System.out.println("3. Exit\n");
 
-            System.out.println("(Navigate by entering number)\n");
+            System.out.println("(Navigate by typing a number and pressing 'Enter')\n");
 
-            System.out.print("Enter number: ");
+            System.out.println("Type a number and press 'Enter': ");
 
             String nav = s.nextLine();
 
@@ -68,12 +68,13 @@ public class TextUI {
         System.out.println("****************");
         System.out.println("================\n");
 
-        System.out.print("Type a stop name: ");
+        System.out.println("Type a stop name and press 'Enter': ");
         String param = s.nextLine();
         System.out.println();
 
         System.out.println("SCHEDULES\n");
         l.searchForTrips(param);
+	System.out.println("\n================\n\n");
     }
 
     public void searchStops() throws IOException {
@@ -85,11 +86,12 @@ public class TextUI {
         System.out.println("****************");
         System.out.println("================\n");
 
-        System.out.print("Type a stop name: ");
+        System.out.println("Type a stop name and press 'Enter': ");
         String param = s.nextLine();
         System.out.println();
 
         System.out.println("STOPS\n");
         l.searchStops(param);
+	System.out.println("\n================\n\n");
     }
 }

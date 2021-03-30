@@ -17,12 +17,12 @@ Käyttäjän tallettamia tietoja haluamistaan pysäkeistä talletetaan tietokant
 
 - HSL:n pysäkkihaku pysäkin nimen perusteella
 - Haetun pysäkin kulkuvälineiden reaaliaikainen arvio valitulle pysäkille saapumisesta
-- Valittujen pysäkkien tallettuminen käyttäjäkohtaisesti
 - Tekstikäyttöliittymä
 
 ## Jatkokehitys
 
 Perusversion toiminnallisuuksien jälkeen on tarkoitus parantaa käyttäjäkokemusta seuraavilla toiminnallisuuksilla:
-- Pysäkkikohtaisen tallentamisen lisäksi tallennetun pysäkin kulkuväline-kohtainen tallentaminen
+- Pysäkkikohtainen tallentaminen ja tallennetun pysäkin kulkuväline-kohtainen tallentaminen
 - Henkilökohtainen koonti tallennetuista pysäkeistä ja kulkuvälineistä ja niihin liittyvä rajapinnan tarjoama reaaliaikainen tieto
 - Graafinen käyttöliittymä 
+

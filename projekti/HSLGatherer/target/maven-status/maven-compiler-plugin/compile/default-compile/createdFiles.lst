@@ -1,0 +1,8 @@
+Main.class
+ui/TextUI.class
+logic/Logic.class
+services/Service.class
+classes/Trip.class
+logic/DBConnector.class
+logic/APIhandle.class
+classes/Stop.class

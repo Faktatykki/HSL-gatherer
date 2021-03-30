@@ -1,6 +1,8 @@
-/home/samkaari/IdeaProjects/HSLGatherer/src/main/java/Classes/Trip.java
-/home/samkaari/IdeaProjects/HSLGatherer/src/main/java/Logic/APIhandle.java
-/home/samkaari/IdeaProjects/HSLGatherer/src/main/java/Service.java
-/home/samkaari/IdeaProjects/HSLGatherer/src/main/java/Logic/Logic.java
-/home/samkaari/IdeaProjects/HSLGatherer/src/main/java/Main.java
-/home/samkaari/IdeaProjects/HSLGatherer/src/main/java/Classes/Stop.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/Main.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/ui/TextUI.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/services/Service.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/logic/Logic.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/classes/Trip.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/classes/Stop.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/logic/APIhandle.java
+/home/ad/lxhome/s/samkaari/Linux/ot-harjoitustyo/projekti/HSLGatherer/src/main/java/logic/DBConnector.java
