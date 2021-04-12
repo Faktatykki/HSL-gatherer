@@ -24,11 +24,11 @@ Saapumisaikoja haetaan tekstimuotoisesti syöttämällä pysäkin nimi ja painam
 
 Tuloksena tulee tiedot pysäkille saapuvista kulkuvälineistä järjestyksessä:  
 
-Sign = linjan koodi 
-Route = linjan nimi ja suunta
-Departure = lähtöaika pysäkiltä
-Delay = mahdollinen viivästys
-Updated = tieto siitä, että onko saapumisaikaa päivitetty vai ei
+- Sign = linjan koodi 
+- Route = linjan nimi ja suunta
+- Departure = lähtöaika pysäkiltä
+- Delay = mahdollinen viivästys
+- Updated = tieto siitä, että onko saapumisaikaa päivitetty vai ei
 
 ![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/matkahakutulos.png)
 
