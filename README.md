@@ -17,7 +17,7 @@ Ohjelma käyttää hyväksi Reittiopaan tarjoamaa avointa rajapintaa kulkuvälin
 
 ## Dokumentaatio
 
-Käyttöohje
+[Käyttöohje](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kayttoohje.md)
 
 [Vaatimuusmäärittely](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/vaatimuusmaarittely.md)  
 
