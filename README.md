@@ -3,11 +3,17 @@
 
 Sovellus mahdollistaa Helsingin seudun liikenteen julkisten liikennevälineiden reaaliaikaisten saapumisaikojen tarkkailun pysäkkikohtaisesti. Sovellus käyttää hyödyksi Reittioppaan tarjoamaa rajapintaa, joka päivittää reaaliaikaisesti tietoa Helsingin metrojen, raitiovaunujen ja linja-autojen pysäkkikohtaisista saapumisajoista ja mahdollisista viivästyksistä. 
 
-Sovelluksen valmiissa versiossa käyttäjä pystyy tallentamaan pysäkkejä ja kulkuvälineitä tietokantaa ja pitämään esimerkiksi yllä reaaliaikaista koontia käyttäjälle relevanteista pysäkeistä ja kulkuvälineistä.
+Sovelluksen valmiissa versiossa käyttäjä pystyy tallentamaan pysäkkejä sekä kulkuvälineitä tietokantaan ja pitämään esimerkiksi yllä reaaliaikaista koontia käyttäjälle relevanteista pysäkeistä ja kulkuvälineistä.
 
 ## Kieli ja versio
 
 Sovellus on kirjoitettu kokonaan Javan versiolla 11.
+
+## Rajapinta
+
+Ohjelma käyttää hyväksi Reittiopaan tarjoamaa avointa rajapintaa kulkuvälineiden reaaliaikaisista sijainneista: 
+
+**https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql**
 
 ## Dokumentaatio
 
