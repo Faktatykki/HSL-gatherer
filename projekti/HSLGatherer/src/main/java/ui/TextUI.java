@@ -64,7 +64,7 @@ public class TextUI {
         System.out.println("================");
         System.out.println("****************");
         System.out.println("================");
-        System.out.println("SEARCH FOR STOPS");
+        System.out.println("SEARCH FOR TRIPS");
         System.out.println("================");
         System.out.println("****************");
         System.out.println("================\n");
