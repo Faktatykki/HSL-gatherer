@@ -19,6 +19,7 @@ public class TextUI {
     }
 
     public void start() throws IOException {
+	addSpaces();
         generalView();
     }
 
@@ -46,15 +47,17 @@ public class TextUI {
             System.out.println("\n");
 
             if(nav.equals("1")) {
+		addSpaces();
                 searchTrips();
-                continue;
             }
             if(nav.equals("2")) {
+		addSpaces();
                 searchStops();
-                continue;
             }
             if(nav.equals("3")) break;
         }
+
+	addSpaces();
     }
 
     public void searchTrips() throws IOException {
@@ -71,8 +74,12 @@ public class TextUI {
         System.out.println();
 
         System.out.println("SCHEDULES\n");
+	System.out.println("\n==============\n\n");
         service.searchForTrips(param);
         System.out.println("\n==============\n\n");
+	System.out.println("Press 'Enter' to continue");
+	String cont = s.nextLine();
+	addSpaces();
     }
 
     public void searchStops() throws IOException {
@@ -89,7 +96,17 @@ public class TextUI {
         System.out.println();
 
         System.out.println("STOPS\n");
+	System.out.println("\n===============\n\n");
         service.searchForStops(param);
         System.out.println("\n===============\n\n");
+	System.out.println("Press 'Enter' to continue");
+	String cont = s.nextLine();
+	addSpaces();
+    }
+
+    public void addSpaces() {
+    	for(int i = 0; i <= 50; i++) {
+		System.out.println();
+	}
     }
 }
