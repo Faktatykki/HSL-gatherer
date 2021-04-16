@@ -36,13 +36,11 @@ public class TextUI {
             System.out.println("***********************");
             System.out.println("=======================\n");
 
-            System.out.println("1. Search Trips");
-            System.out.println("2. Search Stops");
-            System.out.println("3. Add Stop");
-            System.out.println("4. Add Trip");
-            System.out.println("5. Show Stops");
-            System.out.println("6. Delete Stops or Routes");
-            System.out.println("7. Exit\n");
+            System.out.println("1. Add Stop");
+            System.out.println("2. Add Trip");
+            System.out.println("3. Show Stops");
+            System.out.println("4. Delete Stops or Routes");
+            System.out.println("5. Exit\n");
 
             System.out.println("(Navigate by typing a number and pressing 'Enter')\n");
 
@@ -52,89 +50,28 @@ public class TextUI {
 
             System.out.println("\n");
 
-            if(nav.equals("1")) {
-                addSpaces();
-                searchTrips();
-            }
-            if(nav.equals("2")) {
-                addSpaces();
-                searchStops();
-            }
-            if(nav.equals("3")) {
+            if (nav.equals("1")) {
                 addSpaces();
                 addStop();
             }
-            if(nav.equals("4")) {
+            if (nav.equals("2")) {
                 addSpaces();
                 addTrips();
             }
-            if(nav.equals("5")) {
+            if (nav.equals("3")) {
                 addSpaces();
                 showSavedRoutes();
             }
-            if(nav.equals("6")) {
+            if (nav.equals("4")) {
                 addSpaces();
                 deleteStopsOrTrips();
             }
-            if(nav.equals("7")) break;
+            if (nav.equals("5")) {
+                addSpaces();
+                break;
+            }
         }
 
-        addSpaces();
-    }
-
-    public void searchTrips() throws IOException {
-        System.out.println("================");
-        System.out.println("****************");
-        System.out.println("================");
-        System.out.println("SEARCH FOR TRIPS");
-        System.out.println("================");
-        System.out.println("****************");
-        System.out.println("================\n");
-
-        System.out.println("Type a stop name and press 'Enter': ");
-        String param = s.nextLine();
-        System.out.println();
-
-        System.out.println("SCHEDULES\n");
-        System.out.println("\n==============\n\n");
-
-        List<Trip> trips = service.searchForTrips(param);
-
-        for(int i = 0; i < trips.size(); i++) {
-            System.out.println(trips.get(i));
-        }
-
-        System.out.println("\n==============\n\n");
-        System.out.println("Press 'Enter' to continue");
-        String cont = s.nextLine();
-        addSpaces();
-    }
-
-    public void searchStops() throws IOException {
-        System.out.println("================");
-        System.out.println("****************");
-        System.out.println("================");
-        System.out.println("SEARCH FOR STOPS");
-        System.out.println("================");
-        System.out.println("****************");
-        System.out.println("================\n");
-
-        System.out.println("Type a stop name and press 'Enter': ");
-        String param = s.nextLine();
-        System.out.println();
-
-        System.out.println("STOPS\n");
-        System.out.println("\n===============\n\n");
-
-        List<Stop> stops = service.searchForStops(param);
-
-        for(int i = 0; i < stops.size(); i++) {
-            System.out.println(stops.get(i));
-        }
-
-        System.out.println("\n===============\n\n");
-        System.out.println("Press 'Enter' to continue");
-        String cont = s.nextLine();
         addSpaces();
     }
 
