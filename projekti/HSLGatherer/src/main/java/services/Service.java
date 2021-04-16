@@ -19,13 +19,18 @@ public class Service {
 
 
     public List<Stop> searchForStops(String stop) throws IOException {
-        TreeSet<Stop> tempStops = l.searchStops(stop);
-        ArrayList<Stop> stops = new ArrayList<>(tempStops);
+        List<Stop> stops = new ArrayList<>();
+
+        try {
+            TreeSet<Stop> tempStops = l.searchStops(stop);
+            stops = new ArrayList<>(tempStops);
+        } catch (NullPointerException e) {
+        }
 
         return stops;
     }
 
-    public boolean addStop(String stop) throws IOException, SQLException {
+    public boolean addStop(String stop) throws SQLException {
         if (stop == null) {
             return false;
         }
