@@ -2,5 +2,5 @@
 /projekti/HSLGatherer/target
 /projekti/HSLGatherer/hsldatabase.db
 /projekti/temp
-/.nfs0000000005b1653400000007
-/projekti/HSLGatherer/dokumentaatio/.nfs000000000f8dff0700000008
+.*
+!.gitignore
