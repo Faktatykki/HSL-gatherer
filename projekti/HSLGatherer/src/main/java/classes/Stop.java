@@ -14,15 +14,23 @@ public class Stop implements Comparable<Stop> {
 
     @Override
     public boolean equals(Object o) {
-        if(o == this) return true;
+        if (o == this) { 
+            return true;
+		}
 
-        if(o == null) return false;
+        if (o == null) {
+            return false;
+		}
 
-        if(o.getClass() != this.getClass()) return false;
+        if (o.getClass() != this.getClass()) {
+            return false;
+		}
 
         Stop stop = (Stop) o;
 
-        if(this.name.equals(stop.name)) return true;
+        if (this.name.equals(stop.name)) {
+            return true;
+		}
 
         return false;
     }

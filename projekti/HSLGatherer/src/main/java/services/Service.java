@@ -26,13 +26,17 @@ public class Service {
     }
 
     public boolean addStop(String stop) throws IOException, SQLException {
-        if(stop == null) return false;
+        if (stop == null) {
+            return false;
+        }
 
         return l.addStopToDb(stop);
     }
 
     public boolean addTrip(Trip trip, String stop) throws SQLException {
-        if(trip == null || stop == null) return false;
+        if (trip == null || stop == null) {
+            return false;
+        }
 
         return l.addTripToDb(trip, stop);
     }

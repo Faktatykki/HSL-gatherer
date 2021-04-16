@@ -22,14 +22,14 @@ public class APIhandle {
     //joka palautetaan listana arrayta
     public List<String[]> makeHttpRequest(boolean stopQuery, String stop) throws IOException {
         List<String[]> jsonResponse = null;
-
-        if(url == null) {
+        
+        if (url == null) {
             return null;
         }
-
+        
         HttpURLConnection urlConnection = null;
         InputStream inputStream = null;
-
+        
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
@@ -42,7 +42,7 @@ public class APIhandle {
 
             String param = null;
 
-            if(stopQuery) {
+            if (stopQuery) {
                 param = getStops(stop);
             } else {
                 param = getTrips(stop);
@@ -52,10 +52,7 @@ public class APIhandle {
             wr.flush();
             wr.close();
 
-            int rc = urlConnection.getResponseCode();
-
             inputStream = urlConnection.getInputStream();
-
             jsonResponse = readFromStream(stopQuery, inputStream);
 
         } catch (Exception e) {
@@ -74,7 +71,7 @@ public class APIhandle {
 
     private String getTrips(String stop) throws IOException {
         String s = "{" +
-                "                      stops(name: \""+ stop +"\") {" +
+                "                      stops(name: \"" + stop + "\") {" +
                 "                        name" +
                 "                          stoptimesWithoutPatterns {" +
                 "                          trip {" +
@@ -92,7 +89,7 @@ public class APIhandle {
 
     private String getStops(String stop) throws IOException {
         String s = "{" +
-                "                      stops(name:\""+ stop +"\") {" +
+                "                      stops(name:\"" + stop + "\") {" +
                 "                        name" +
                 "                          }" +
                 "                           }";
@@ -106,7 +103,7 @@ public class APIhandle {
 
         List<String[]> tempList;
 
-        if(stopQuery) {
+        if (stopQuery) {
             tempList = parseStopGraphQLResult(s);
         } else {
             tempList = parseGraphQLResult(s);
@@ -118,10 +115,10 @@ public class APIhandle {
     private List<String[]> parseStopGraphQLResult(Scanner s) {
         List<String[]> tempList = new ArrayList<>();
 
-        while(s.hasNext()) {
+        while (s.hasNext()) {
             String[] tempSplit = s.next().split("name");
 
-            for(int i = 1; i < tempSplit.length; i++) {
+            for (int i = 1; i < tempSplit.length; i++) {
                 tempSplit[i] = tempSplit[i].replaceAll("[^a-zäöåA-ZÖÄÅ0-9.' ']", "");
                 String[] added = new String[1];
                 added[0] = tempSplit[i];
@@ -136,12 +133,12 @@ public class APIhandle {
     private List<String[]> parseGraphQLResult(Scanner s) {
         List<String[]> tempList = new ArrayList<>();
 
-        while(s.hasNext()) {
+        while (s.hasNext()) {
 
             String[] tempSplit = s.next().split("[:,]");
 
-            for(int i = 0; i < tempSplit.length; i++) {
-                if(i == 10) {
+            for (int i = 0; i < tempSplit.length; i++) {
+                if (i == 10) {
                     tempSplit[i] = tempSplit[i].replaceAll("[\"\\]\\}]", "");
                     continue;
                 }
@@ -149,7 +146,7 @@ public class APIhandle {
                 tempSplit[i] = tempSplit[i].replaceAll("[^a-zäöåA-ZÖÄÅ0-9.' ']", "");
             }
 
-            if(tempSplit.length < 10) {
+            if (tempSplit.length < 10) {
                 continue;
             }
 

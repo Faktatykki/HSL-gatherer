@@ -27,11 +27,17 @@ public class Trip implements Comparable<Trip> {
         return this.sign;
     }
 
-    public String getDeparture() { return this.departure; }
+    public String getDeparture() {
+        return this.departure; 
+    }
 
-    public String getDelay() { return this.delay; }
+    public String getDelay() {
+        return this.delay;
+    }
 
-    public String getUpdated() { return this.updated; }
+    public String getUpdated() {
+        return this.updated;
+    }
 
     public String getRoute() {
         return this.route;
@@ -39,13 +45,17 @@ public class Trip implements Comparable<Trip> {
 
     @Override
     public boolean equals(Object o) {
-        if(o == this) return true;
+        if (o == this) { 
+            return true;
+		}
 
-        if(!(o instanceof Trip)) return false;
+        if (!(o instanceof Trip)) { 
+            return false;
+		}
 
         Trip comp = (Trip) o;
 
-        if(this.sign.equals(comp.sign) && this.route.equals(comp.route)) {
+        if (this.sign.equals(comp.sign) && this.route.equals(comp.route)) { 
             return true;
         }
 

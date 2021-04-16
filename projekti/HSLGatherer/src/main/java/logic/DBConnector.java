@@ -11,7 +11,7 @@ public class DBConnector {
         try {
             this.db = DriverManager.getConnection("jdbc:sqlite:hsldatabase.db");
             createTables();
-        } catch(SQLException e) {
+        } catch (SQLException e) {
         }
     }
 
@@ -23,7 +23,7 @@ public class DBConnector {
             stmt.execute("PRAGMA foreign_keys = ON");
             stmt.execute("CREATE TABLE Stops (id INTEGER PRIMARY KEY, name TEXT UNIQUE)");
             stmt.execute("CREATE TABLE Trips (id INTEGER PRIMARY KEY, sign TEXT, stop_id INTEGER REFERENCES Stops(id) ON DELETE CASCADE, route TEXT, UNIQUE(sign, route))");
-        } catch(SQLException e) {
+        } catch (SQLException e) {
         }
     }
 

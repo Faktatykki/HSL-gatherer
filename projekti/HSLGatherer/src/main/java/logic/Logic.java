@@ -12,18 +12,18 @@ import java.util.*;
 public class Logic {
 
     private DBConnector db;
-    private APIhandle API;
+    private APIhandle api;
 
     public Logic() throws SQLException, MalformedURLException {
         this.db = new DBConnector();
-        this.API = new APIhandle();
+        this.api = new APIhandle();
     }
 
     public List<Trip> searchForTrips(String stop) throws IOException {
-        List<String[]> graphResp = this.API.makeHttpRequest(false,stop);
+        List<String[]> graphResp = this.api.makeHttpRequest(false, stop);
         List<Trip> trips = new ArrayList<>();
 
-        for(int i = 0; i < graphResp.size(); i++) {
+        for (int i = 0; i < graphResp.size(); i++) {
             String[] arr = graphResp.get(i);
             trips.add(new Trip(arr[0], arr[1], arr[2], arr[3], arr[4]));
         }
@@ -32,10 +32,10 @@ public class Logic {
     }
 
     public TreeSet<Stop> searchStops(String stop) throws IOException {
-        List<String[]> graphResp = this.API.makeHttpRequest(true, stop);
+        List<String[]> graphResp = this.api.makeHttpRequest(true, stop);
         TreeSet<Stop> stops = new TreeSet<>();
 
-        for(int i = 0; i < graphResp.size(); i++) {
+        for (int i = 0; i < graphResp.size(); i++) {
             String[] arr = graphResp.get(i);
             stops.add(new Stop(arr[0]));
         }
@@ -59,7 +59,7 @@ public class Logic {
 
         List<String> stops = new ArrayList<>();
 
-        while(rs.next()) {
+        while (rs.next()) {
             stops.add(rs.getString("name"));
         }
 
@@ -72,7 +72,7 @@ public class Logic {
         ResultSet rs = db.getSavedRoutes();
         HashSet<Trip> trips = new HashSet<>();
 
-        while(rs.next()) {
+        while (rs.next()) {
             Trip trip = new Trip(rs.getString("sign"), rs.getString("route"));
             trips.add(trip);
         }
