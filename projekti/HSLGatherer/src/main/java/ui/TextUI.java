@@ -84,17 +84,29 @@ public class TextUI {
         System.out.println("******************************");
         System.out.println("==============================\n");
 
-        System.out.println("Type a stop name and press 'Enter': ");
+        System.out.println("Press 'Enter' to continue OR type a stop name and press 'Enter': ");
         String param = s.nextLine();
         System.out.println();
+
+        if (param.isBlank()) {
+            addSpaces();
+            return;
+        }
 
         System.out.println("STOPS\n");
         System.out.println("\n===============\n\n");
 
         List<Stop> stops = service.searchForStops(param);
 
-        for(int i = 0; i < stops.size(); i++) {
-            System.out.println(i + 1 + ". " + stops.get(i));
+        if (stops.size() > 0) {
+            for (int i = 0; i < stops.size(); i++) {
+                System.out.println(i + 1 + ". " + stops.get(i));
+            }
+        } else {
+            System.out.println("No stops found! Continuing..");
+            TimeUnit.SECONDS.sleep(3);
+            addSpaces();
+            return;
         }
 
         System.out.println("\n===============\n\n");

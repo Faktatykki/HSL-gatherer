@@ -96,8 +96,6 @@ public class APIhandle {
         return s;
     }
 
-
-
     private List<String[]> readFromStream(boolean stopQuery, InputStream stream) throws IOException {
         Scanner s = new Scanner(stream).useDelimiter("},\\{").useDelimiter("name").useDelimiter("trip");
 
