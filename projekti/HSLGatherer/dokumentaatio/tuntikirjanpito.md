@@ -57,7 +57,7 @@
 
 **13.4** 
 
-13:00 - 18:00 Luokkien rollien uudelleenarviointia ja tietokantayhteyden luomista 
+13:00 - 18:00 Luokkien roolien uudelleenarviointia ja tietokantayhteyden luomista 
 
 *Käytetty aika: 5 h* 
 
