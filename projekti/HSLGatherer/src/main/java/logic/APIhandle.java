@@ -56,7 +56,6 @@ public class APIhandle {
             jsonResponse = readFromStream(stopQuery, inputStream);
 
         } catch (Exception e) {
-            System.out.println(e.toString());
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();

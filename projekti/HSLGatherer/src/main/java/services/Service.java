@@ -13,12 +13,15 @@ public class Service {
 
     Logic l;
 
-    public Service() throws SQLException, MalformedURLException {
-        l = new Logic();
+    public Service(boolean test) throws SQLException, MalformedURLException {
+        l = new Logic(test);
     }
 
-
     public List<Stop> searchForStops(String stop) throws IOException {
+        if (stop == null) {
+           return null;
+        }
+
         List<Stop> stops = new ArrayList<>();
 
         try {
@@ -39,7 +42,7 @@ public class Service {
     }
 
     public boolean addTrip(Trip trip, String stop) throws SQLException {
-        if (trip == null || stop == null) {
+        if (trip == null || stop == null || trip.getRoute() == null || trip.getSign() == null) {
             return false;
         }
 
@@ -47,6 +50,10 @@ public class Service {
     }
 
     public List<Trip> searchForTrips(String stop) throws IOException {
+        if (stop == null) {
+            return null;
+        }
+
         List<Trip> trips = l.searchForTrips(stop);
 
         Collections.sort(trips);
@@ -55,6 +62,10 @@ public class Service {
     }
 
     public List<Trip> searchForRoutes(String stop) throws IOException {
+        if (stop == null) {
+            return null;
+        }
+
         Set<Trip> tempTrips = new TreeSet<>(l.searchForTrips(stop));
 
         return new ArrayList<>(tempTrips);
@@ -69,10 +80,22 @@ public class Service {
     }
 
     public boolean deleteStop(String stop) throws SQLException {
+        if (stop == null) {
+            return false;
+        }
+
         return l.deleteStop(stop);
     }
 
     public boolean deleteRoute(Trip trip) throws SQLException {
+        if (trip == null || trip.getSign() == null || trip.getRoute() == null) {
+            return false;
+        }
+
         return l.deleteRoute(trip);
+    }
+
+    public boolean deleteTestDb() throws SQLException {
+        return l.deleteTestDb();
     }
 }

@@ -17,7 +17,7 @@ public class TextUI {
 
     public TextUI() throws MalformedURLException, SQLException {
         this.s = new Scanner(System.in);
-        this.service = new Service();
+        this.service = new Service(false);
     }
 
     public void start() throws IOException, InterruptedException, SQLException {
@@ -103,7 +103,7 @@ public class TextUI {
                 System.out.println(i + 1 + ". " + stops.get(i));
             }
         } else {
-            System.out.println("No stops found! Continuing..");
+            System.out.println("No stops found! (Can contain only characters) Continuing..");
             TimeUnit.SECONDS.sleep(3);
             addSpaces();
             return;
@@ -230,22 +230,36 @@ public class TextUI {
         List<String> stops = service.getSavedStops();
         Set<Trip> routes = service.getSavedRoutes();
 
-        for(String stop: stops) {
+        if (stops.size() < 1) {
+            System.out.println("\nNot yet any saved stops.. ");
+        }
+
+        for (String stop: stops) {
             List<Trip> trips = service.searchForTrips(stop);
 
             System.out.println("\n" + stop + "\n");
 
+            System.out.println("===============");
+
             Trip prev = null;
 
-            for(Trip trip: trips) {
+            int routeCount = 0;
 
+            for (Trip trip : trips) {
                 if (routes.contains(trip)) {
-                    if(!trip.equals(prev)) System.out.println();
-                    System.out.println(trip);
-                    prev = trip;
+                    if (!trip.equals(prev)) System.out.println();
+                        System.out.println(trip);
+                        prev = trip;
+                        routeCount++;
                 }
             }
 
+            if(routeCount == 0) {
+                System.out.println("\nNot yet any routes saved for " + stop + "..");
+            }
+
+
+            System.out.println("\n===============");
             System.out.println();
         }
 
@@ -338,8 +352,7 @@ public class TextUI {
             try {
                 route = routes.get(Integer.parseInt(param) - 1);
             } catch(Exception e) {
-                System.out.println(e.getMessage());
-                System.out.println("Something went very wrong, I guess you put something else than numbers, you twat");
+                System.out.println("Something went very wrong, I guess you put something else than numbers");
                 TimeUnit.SECONDS.sleep(3);
                 addSpaces();
                 return;

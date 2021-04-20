@@ -1,15 +1,21 @@
 package logic;
 
+import java.io.File;
 import java.sql.*;
 import java.util.*;
 
 public class DBConnector {
 
     private Connection db;
+    private boolean test;
 
-    public DBConnector() throws SQLException {
+    public DBConnector(boolean test) throws SQLException {
         try {
-            this.db = DriverManager.getConnection("jdbc:sqlite:hsldatabase.db");
+            if(test) {
+                this.db = DriverManager.getConnection("jdbc:sqlite:test.db");
+            } else {
+                this.db = DriverManager.getConnection("jdbc:sqlite:hsldatabase.db");
+            }
             createTables();
         } catch (SQLException e) {
         }
@@ -103,5 +109,18 @@ public class DBConnector {
         }
 
         return deleted;
+    }
+
+    public boolean deleteDb() throws SQLException {
+        try {
+            Statement stmt = db.createStatement();
+
+            stmt.close();
+            this.db.close();
+
+            return new File("test.db").delete();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

@@ -14,8 +14,8 @@ public class Logic {
     private DBConnector db;
     private APIhandle api;
 
-    public Logic() throws SQLException, MalformedURLException {
-        this.db = new DBConnector();
+    public Logic(boolean test) throws SQLException, MalformedURLException {
+        this.db = new DBConnector(test);
         this.api = new APIhandle();
     }
 
@@ -89,5 +89,9 @@ public class Logic {
         String route = trip.getRoute();
 
         return db.deleteRoute(sign, route);
+    }
+
+    public boolean deleteTestDb() throws SQLException {
+        return db.deleteDb();
     }
 }
