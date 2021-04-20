@@ -48,5 +48,10 @@ mvn test
 Jacoco-testikattavuusraportin luominen tapahtuu komennolla:
 
 ```
+mvn jacoco:report
+```
+Jos ylläoleva komento ei toimi, kannattaa kokeilla seuraavaa: 
+
+```
 mvn clean jacoco:prepare-agent install jacoco:report
 ```
