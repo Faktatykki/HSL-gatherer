@@ -80,14 +80,22 @@
 
 9:45 - 15:00 Yleistä hiomista, jatkokehityksen pohtimista, tuhotun dokumentaation paikantamista 
 
+*Käytetty aika: 5 h 15 min*
+
 **18.4**
 
 11:15 - 12:15 Luokkakaavion piirtämistä, pienen merge-ongelman selvittelyä 
+
+*Käytetty aika: 1 h*
 
 **19.4** 
 
 18:30 - 18:45 Kuvien upottamista tiedostoon arkkitehtuuri.md 
 
+*Käytetty aika: 15 min*
+
 **20.4**
 
-9:00 - 15:00 Erään ohjelman kaatumisongelman selvittämistä, testiluokkien ja testien luomista, dokumentaation päivittämistä 
+9:00 - 16:00 Erään ohjelman kaatumisongelman selvittämistä, testiluokkien ja testien luomista, dokumentaation päivittämistä 
+
+*Käytetty aika: 7 h* 

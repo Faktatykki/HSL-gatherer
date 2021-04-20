@@ -15,7 +15,7 @@ Käyttäjän tallettamia tietoja haluamistaan pysäkeistä talletetaan tietokant
 
 - [x] HSL:n pysäkkihaku pysäkin nimen perusteella 
 - [x] Haetun pysäkin kulkuvälineiden reaaliaikainen arvio valitulle pysäkille saapumisesta 
-- [x] Valittujen pysäkkien tallettuminen käyttäjäkohtaisesti 
+- [x] Valittujen pysäkkien tallettuminen käyttäjäkohtaisesti 
 - [x] Tekstikäyttöliittymä 
 
 ## Jatkokehitys 
