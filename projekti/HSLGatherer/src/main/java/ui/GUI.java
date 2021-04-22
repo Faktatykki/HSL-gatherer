@@ -18,6 +18,7 @@ import classes.Stop;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Set;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -85,7 +86,13 @@ public class GUI extends Application {
             } catch (SQLException exception) {
             }
         });
-        showStopsButton.setOnAction(e -> { stage.setScene(showStopsScene()); });
+        showStopsButton.setOnAction(e -> {
+            try {
+                stage.setScene(showStopsScene());
+            } catch (SQLException exception) {
+            } catch (IOException exception) {
+            }
+        });
         deleteButton.setOnAction(e -> { stage.setScene(deleteMenuScene()); });
 
         buttonLO.getChildren().addAll(addStopButton, addRouteButton, showStopsButton, deleteButton);
@@ -264,9 +271,65 @@ public class GUI extends Application {
         return new Scene(layout);
     }
 
-    public Scene showStopsScene() {
+    public Scene showStopsScene() throws SQLException, IOException {
+        VBox layout = new VBox(10);
+        layout.setAlignment(Pos.TOP_CENTER);
+        layout.setPadding(new Insets(30, 30, 30, 30));
+        layout.setPrefSize(500, 400);
+
+        Text title = new Text("SAVED STOPS AND ROUTES");
+
+        List<String> stops = s.getSavedStops();
+        Set<Trip> routes = s.getSavedRoutes();
+
+        layout.setAlignment(Pos.TOP_CENTER);
+        layout.getChildren().add(title);
+
+        if (stops.size() < 1) {
+
+        }
+
+        for (String stop: stops) {
+            Text stopName = new Text("STOP: " + stop);
+            stopName.setLineSpacing(20);
+
+
+            VBox routeLO = new VBox(5);
+            routeLO.setPadding(new Insets(20, 20, 20, 20));
+            routeLO.setAlignment(Pos.CENTER);
+
+            List<Trip> trips = s.searchForTrips(stop);
+
+            Trip prev = null;
+
+            int routeCount = 0;
+
+            for (Trip trip: trips) {
+                if (routes.contains(trip)) {
+                    if (!trip.equals(prev)) {
+
+                    }
+                    routeLO.getChildren().add(new Text(trip.toString()));
+                    prev = trip;
+                    routeCount++;
+                }
+            }
+
+            if(routeCount == 0) {
+                routeLO.getChildren().add(new Text("Nothing saved for " + stop + " yet.."));
+            }
+
+            layout.getChildren().addAll(stopName, routeLO);
+        }
+
+        Button returnButton = new Button("Return");
+        returnButton.setPrefWidth(200);
+
+        layout.getChildren().add(returnButton);
         
-        return null;
+        returnButton.setOnMouseClicked(e -> { stage.setScene(generalView()); });
+
+        return new Scene(layout);
     }
 
     public Scene deleteMenuScene() {
