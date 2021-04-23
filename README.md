@@ -55,3 +55,10 @@ Jos ylläoleva komento ei toimi, kannattaa kokeilla seuraavaa:
 ```
 mvn clean jacoco:prepare-agent install jacoco:report
 ```
+### Jarin generointi
+
+Suoritettavan jarin saa generoitua komennolla: 
+
+```
+mvn package
+```
