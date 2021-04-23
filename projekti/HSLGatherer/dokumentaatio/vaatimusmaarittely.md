@@ -23,4 +23,5 @@ Käyttäjän tallettamia tietoja haluamistaan pysäkeistä talletetaan tietokant
 Perusversion toiminnallisuuksien jälkeen on tarkoitus parantaa käyttäjäkokemusta seuraavilla toiminnallisuuksilla: 
 - [x] Pysäkkikohtaisen tallentamisen lisäksi tallennetun pysäkin kulkuväline-kohtainen tallentaminen 
 - [x] Henkilökohtainen koonti tallennetuista pysäkeistä ja kulkuvälineistä ja niihin liittyvä rajapinnan tarjoama reaaliaikainen tieto 
-- [ ] Graafinen käyttöliittymä 
+- [x] Graafinen käyttöliittymä
+- [ ] Reaaliaikainen tallennettujen reittien aikataulujen päivittäjä  
