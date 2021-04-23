@@ -1,5 +1,6 @@
 package logic;
 
+import javax.xml.transform.Result;
 import java.io.File;
 import java.sql.*;
 import java.util.*;
@@ -16,6 +17,7 @@ public class DBConnector {
             } else {
                 this.db = DriverManager.getConnection("jdbc:sqlite:hsldatabase.db");
             }
+
             createTables();
         } catch (SQLException e) {
         }
@@ -71,15 +73,25 @@ public class DBConnector {
     }
 
     public ResultSet getSavedStops() throws SQLException {
-        Statement stmt = db.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT name FROM Stops");
+        ResultSet rs = null;
+
+        try {
+            Statement stmt = db.createStatement();
+            rs = stmt.executeQuery("SELECT name FROM Stops");
+        } catch (NullPointerException e) {
+        }
 
         return rs;
     }
 
     public ResultSet getSavedRoutes() throws SQLException {
-        Statement stmt = db.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM Trips");
+        ResultSet rs = null;
+
+        try {
+            Statement stmt = db.createStatement();
+            rs = stmt.executeQuery("SELECT * FROM Trips");
+        } catch (Exception e) {
+        }
 
         return rs;
     }

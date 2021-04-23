@@ -59,8 +59,10 @@ public class Logic {
 
         List<String> stops = new ArrayList<>();
 
-        while (rs.next()) {
-            stops.add(rs.getString("name"));
+        if(rs != null) {
+            while (rs.next()) {
+                stops.add(rs.getString("name"));
+            }
         }
 
         Collections.sort(stops);
@@ -72,9 +74,11 @@ public class Logic {
         ResultSet rs = db.getSavedRoutes();
         HashSet<Trip> trips = new HashSet<>();
 
-        while (rs.next()) {
-            Trip trip = new Trip(rs.getString("sign"), rs.getString("route"));
-            trips.add(trip);
+        if (rs != null) {
+            while (rs.next()) {
+                Trip trip = new Trip(rs.getString("sign"), rs.getString("route"));
+                trips.add(trip);
+            }
         }
 
         return trips;
