@@ -19,7 +19,7 @@ public class Service {
 
     public List<Stop> searchForStops(String stop) throws IOException {
         if (stop == null) {
-           return null;
+            return null;
         }
 
         List<Stop> stops = new ArrayList<>();

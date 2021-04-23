@@ -59,7 +59,7 @@ public class Logic {
 
         List<String> stops = new ArrayList<>();
 
-        if(rs != null) {
+        if (rs != null) {
             while (rs.next()) {
                 stops.add(rs.getString("name"));
             }

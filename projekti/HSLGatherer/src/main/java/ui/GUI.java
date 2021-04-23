@@ -495,4 +495,8 @@ public class GUI extends Application {
 
         return new Scene(layout);
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

@@ -12,7 +12,7 @@ public class DBConnector {
 
     public DBConnector(boolean test) throws SQLException {
         try {
-            if(test) {
+            if (test) {
                 this.db = DriverManager.getConnection("jdbc:sqlite:test.db");
             } else {
                 this.db = DriverManager.getConnection("jdbc:sqlite:hsldatabase.db");

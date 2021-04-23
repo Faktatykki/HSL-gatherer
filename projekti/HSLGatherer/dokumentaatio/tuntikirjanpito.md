@@ -99,3 +99,16 @@
 9:00 - 16:00 Erään ohjelman kaatumisongelman selvittämistä, testiluokkien ja testien luomista, dokumentaation päivittämistä 
 
 *Käytetty aika: 7 h* 
+
+**22.4** 
+ 
+9:15 - 14:30 Graafisen käyttöliittymän luomista 
+
+*Käytetty aika: 5 h 15 min* 
+
+**23.4** 
+ 
+9:00 - 12:30 Kummallisen bugin selvittelyä, graafisen käyttöliittymän loppujen toiminnallisuuksien loppuunvienti 
+15:15 - 16:30 Ensimmäisen releasen valmistelua 
+
+*Käytetty aika: 4 h 45 min* 
