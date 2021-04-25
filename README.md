@@ -62,3 +62,8 @@ Suoritettavan jarin saa generoitua komennolla:
 ```
 mvn package
 ```
+Komento luo kansioon *target* suoritettavan tiedoston *HSLGatherer-1.0-SNAPSHOT.jar*, joka suoritetaan komennolla: 
+
+```
+java -jar HSLGatherer-1.0-SNAPSHOT.jar
+````
