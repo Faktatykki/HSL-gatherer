@@ -23,9 +23,15 @@ Ohjelma käyttää hyväksi Reittiopaan tarjoamaa avointa rajapintaa kulkuvälin
 
 [Työaikakirjanpito](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/tuntikirjanpito.md)
 
-[Arkkitehtuuri](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/arkkitehtuuri.md)
+[Arkkitehtuuri](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/arkkitehtuuri.md) 
 
-## Komentorivitoiminnot
+## Releaset
+
+[Viikon 5 release](https://github.com/Faktatykki/ot-harjoitustyo/releases/tag/viikko5)
+
+## Komentorivitoiminnot 
+
+Kaikki komennot suoritetaan samasta tiedostosijainnista, missä pom.xml sijaitsee.
 
 ### Ohjelman suorittaminen
 
