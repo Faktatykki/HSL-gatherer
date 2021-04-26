@@ -67,3 +67,13 @@ Komento luo kansioon *target* suoritettavan tiedoston *HSLGatherer-1.0-SNAPSHOT.
 ```
 java -jar HSLGatherer-1.0-SNAPSHOT.jar
 ````
+
+### Checkstyle 
+
+Checkstyle-tarkistukset saa suoritettua komennolla: 
+
+```
+mvn jxr:jxr checkstyle:checkstyle
+```
+
+Mahdolliset virheilmoitukset löytyvät tiedostosta *target/site/checkstyle.html*
