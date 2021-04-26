@@ -38,7 +38,7 @@ Kun käyttäjä on tallentanut vähintään yhden pysäkin, on mahdollista talle
 
 Tämän jälkeen valitaan tallennettava linja painamalla linjan vierellä olevaa nappia 'Save'.
 
-![alt text](https://github.com/Faktatykki/otharjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/routeResult.png)
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/routeResult.png)
 
 Paluu takaisin päänäkymään tapahtuu painamalla 'Return'. 
 
