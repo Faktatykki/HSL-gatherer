@@ -80,6 +80,6 @@ Paluu takaisin päänäkymään tapahtuu painamalla 'Return'.  
 
 ## Ohjelman sulkeminen 
 
-### (5. Exit) 
+### (Exit) 
 
 Ohjelma sulkeutuu painamalla päänäkymässä 'Exit'-nappia.
