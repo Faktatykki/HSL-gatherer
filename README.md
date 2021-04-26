@@ -7,7 +7,7 @@ Sovelluksen valmiissa versiossa k채ytt채j채 pystyy tallentamaan pys채kkej채 sek�
 
 ## Kieli ja versio
 
-Sovellus on kirjoitettu kokonaan Javan versiolla 11.
+Sovellus on kirjoitettu kokonaan Javan versiolla 11 ja vaati toimiakseen kyseisen version (mahdollisesti toimii Javan versiolla 8, mutta ei ole testattu). 
 
 ## Rajapinta
 
