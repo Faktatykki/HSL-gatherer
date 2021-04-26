@@ -8,73 +8,159 @@ Ohjelman saa käynnistettyä komennolla
 mvn compile exec:java -Dexec.mainClass=main.Main
 ```
 
-Komento käynnistää sovelluksen tekstikäyttöliittymän. 
-
-## Ohjelmassa navigointi 
-
-Navigointi tapahtuu koko sovelluksessa syöttämällä kenttään numeron ja painamalla 'Enter'. Paluu tapahtuu aina painamalla 'Enter' ilman parametria. Seuraava ohje näyttää kuvin esimerkin pysäkin ja linjan lisäämisestä sekä niiden poistamisesta. 
+Komento käynnistää sovelluksen graafisen käyttöliittymän. 
 
 ## Päänäkymä 
 
-Päänäkymässä valitaan, että mihin toimintoon halutaan siirtyä (syöttämällä numero 1-4) tai poistua (syöttämällä numero viisi (5))
+Päänäkymässä näkyy kaikki sovelluksen tarjoamat toiminnot. Navigointi tapahtuu painamalla haluamaansa toimintoa. 
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/paanakyma.png) 
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/mainMenu.png) 
 
-## Pysäkin lisääminen
-### (1. Add Stop) 
+## Pysäkin etsiminen ja tallentaminen
+### (Add stop)
+Näkymässä syötetään halutun pysäkin nimi ja painetaan 'Search'.
 
-Näkymässä syötetään halutun pysäkin nimi ja painetaan 'Enter'.
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/searchStop.png)
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/haku.png)
+Sovellus näyttää hakutulokset. Pysäkin tallentaminen tapahtuu painamalla hakutulosten vierellä olevaa nappia 'Save'. 
 
-Seuraavassa näkymässä näytetään hakutulokset ja mahdollisuus tallentaa haluttu pysäkki hakutuloksista. Valitseminen tapahtuu taas syöttämällä numero. 
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/searchResult.png) 
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/hakutallennus.png) 
-
-Paluu takaisin päänäkymään tapahtuu painamalla 'Enter'. 
+Paluu takaisin päänäkymään tapahtuu painamalla 'Return'. 
 
 ## Linjan lisääminen
-### (2. Add Trip)  
+### (Add route) 
+Kun käyttäjä on tallentanut vähintään yhden pysäkin, on mahdollista tallentaa pysäkkikohtaisia linjoja. Linjan tallentamiseen siirrytään painamalla haluamaansa pysäkkiä.
 
-Kun käyttäjä on tallentanut vähintään yhden pysäkin, on mahdollista tallentaa pysäkkikohtaisia linjoja valitsemalla ensin pysäkki
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/addRoute.png) 
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/tallennetutpysakit.png) 
+Tämän jälkeen valitaan tallennettava linja painamalla linjan vierellä olevaa nappia 'Save'.
 
-ja sitten valitsemalla haluttu linja tallennettavaksi (parametrina ei toimi linjan numero vaan vasemmassa laidassa näkyvä indeksinumero)
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/routeResult.png)
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/kuvatallentamisesta.png)
+Paluu takaisin päänäkymään tapahtuu painamalla 'Return'. 
 
-Paluu takaisin päänäkymään tapahtuu painamalla 'Enter'. 
-
+## Tallennettujen pysäkkien ja linjojen koonti ​
+23
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/searchStop.png)
+24
+​
+25
+Sovellus näyttää hakutulokset. Pysäkin tallentaminen tapahtuu painamalla hakutulosten vierellä olevaa nappia 'Save'. 
+26
+​
+27
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/searchResult.png) 
+28
+​
+29
+Paluu takaisin päänäkymään tapahtuu painamalla 'Return'. 
+30
+​
+31
+## Linjan lisääminen
+32
+### (Add route) 
+33
+Kun käyttäjä on tallentanut vähintään yhden pysäkin, on mahdollista tallentaa pysäkkikohtaisia linjoja. Linjan tallentamiseen siirrytään painamalla haluamaansa pysäkkiä.
+34
+​
+35
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/addRoute.png) 
+36
+​
+37
+Tämän jälkeen valitaan tallennettava linja painamalla linjan vierellä olevaa nappia 'Save'.
+38
+​
+39
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/routeResult.png)
+40
+​
+41
+Paluu takaisin päänäkymään tapahtuu painamalla 'Return'. 
+42
+​
+43
 ## Tallennettujen pysäkkien ja linjojen koonti 
-### (3. Show Stops) 
+44
+### (Show saved stops and routes)
+45
+​
+46
+Käyttäjä näkee kaikki tallentamansa pysäkit ja linjat. Linjoista näkee lähtöajan ja mahdollisen viivästyksen. Koonti näyttää kaikki tallennetut linjat pysäkkikohtaisesti. 
+47
+​
+48
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/savedRoutes.png)
+49
+​
+50
+## Tallennettujen pysäkkien ja linjojen poistaminen 
+51
+### (Delete stops or routes)
+52
+​
+53
+Käyttäjä voi poistaa jo tallennettuja pysäkkejä ja linjoja. Näkymässä käyttäjä valitsee, että haluaako poistaa pysäkkejä vai linjoja. 
+54
+​
+55
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteMenu.png)
+56
+​
+57
+Poistaminen tapahtuu painamalla linjan tai pysäkin viereistä 'Delete'-nappia.
+58
+​
+59
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteRoute.png)
+60
+​
+61
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteStop.png)
+62
+​
+63
+Poistamalla pysäkin poistuu myös pysäkille pysähtyvät käyttäjän tallettamat linjat. 
+64
+​
+65
+Paluu takaisin päänäkymään tapahtuu painamalla 'Return'.  
+66
+​
+67
+## Ohjelman sulkeminen 
+68
+### (5. Exit) 
+69
+​
+70
+Ohjelma sulkeutuu painamalla päänäkymässä 'Exit'-nappia.
+### (Show saved stops and routes)
 
-Kohdassa "Show Stops" käyttäjä voi nähdä kaikki tallentamansa pysäkit ja linjat. Koonti näyttää kaikki tallennetut linjat pysäkkikohtaisesti. 
+Käyttäjä näkee kaikki tallentamansa pysäkit ja linjat. Linjoista näkee lähtöajan ja mahdollisen viivästyksen. Koonti näyttää kaikki tallennetut linjat pysäkkikohtaisesti. 
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/kuvakoonnista.png)
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/savedRoutes.png)
 
 ## Tallennettujen pysäkkien ja linjojen poistaminen 
-### (4. Delete Stops or Routes) 
+### (Delete stops or routes)
 
-Kohdassa "Delete Stops or Routes" on mahdollista poistaa jo tallennettuja pysäkkejä ja linjoja. Näkymässä käyttäjä valitsee, että haluaako poistaa pysäkkejä vai linjoja. 
+Käyttäjä voi poistaa jo tallennettuja pysäkkejä ja linjoja. Näkymässä käyttäjä valitsee, että haluaako poistaa pysäkkejä vai linjoja. 
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/kuvavalinnasta.png)
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteMenu.png)
 
-Poistovalinnan tekeminen toimii syöttämällä poistettavan linjan tai pysäkin indeksinumero. 
+Poistaminen tapahtuu painamalla linjan tai pysäkin viereistä 'Delete'-nappia.
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/linjapoisto.png)
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteRoute.png)
 
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/pysakkipoisto.png)
+![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteStop.png)
 
-Poistamalla pysäkki poistuu myös pysäkille pysähtyvät käyttäjän tallettamat linjat. 
+Poistamalla pysäkin poistuu myös pysäkille pysähtyvät käyttäjän tallettamat linjat. 
 
-Paluu takaisin päänäkymään tapahtuu painamalla 'Enter'.  
+Paluu takaisin päänäkymään tapahtuu painamalla 'Return'.  
 
 ## Ohjelman sulkeminen 
 ### (5. Exit) 
 
-Ohjelma sulkeutuu antamalla päänäkymässä parametriksi numeron viisi (5).  
-
-
-
-
+Ohjelma sulkeutuu painamalla päänäkymässä 'Exit'-nappia.
