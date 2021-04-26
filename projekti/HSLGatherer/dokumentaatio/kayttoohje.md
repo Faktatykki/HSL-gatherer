@@ -97,30 +97,3 @@ Paluu takaisin päänäkymään tapahtuu painamalla 'Return'.  
 ### (5. Exit) 
 
 Ohjelma sulkeutuu painamalla päänäkymässä 'Exit'-nappia.
-### (Show saved stops and routes)
-
-Käyttäjä näkee kaikki tallentamansa pysäkit ja linjat. Linjoista näkee lähtöajan ja mahdollisen viivästyksen. Koonti näyttää kaikki tallennetut linjat pysäkkikohtaisesti. 
-
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/savedRoutes.png)
-
-## Tallennettujen pysäkkien ja linjojen poistaminen 
-### (Delete stops or routes)
-
-Käyttäjä voi poistaa jo tallennettuja pysäkkejä ja linjoja. Näkymässä käyttäjä valitsee, että haluaako poistaa pysäkkejä vai linjoja. 
-
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteMenu.png)
-
-Poistaminen tapahtuu painamalla linjan tai pysäkin viereistä 'Delete'-nappia.
-
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteRoute.png)
-
-![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/deleteStop.png)
-
-Poistamalla pysäkin poistuu myös pysäkille pysähtyvät käyttäjän tallettamat linjat. 
-
-Paluu takaisin päänäkymään tapahtuu painamalla 'Return'.  
-
-## Ohjelman sulkeminen 
-### (Exit) 
-
-Ohjelma sulkeutuu painamalla päänäkymässä 'Exit'-nappia.
