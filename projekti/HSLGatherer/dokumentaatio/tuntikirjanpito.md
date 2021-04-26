@@ -111,4 +111,10 @@
 9:00 - 12:30 Kummallisen bugin selvittelyä, graafisen käyttöliittymän loppujen toiminnallisuuksien loppuunvienti 
 15:15 - 16:30 Ensimmäisen releasen valmistelua 
 
-*Käytetty aika: 4 h 45 min* 
+*Käytetty aika: 4 h 45 min*
+
+**26.4**
+
+14:00 - 18:00 Dokumentaation päivittämistä 
+
+*Käytetty aika: 4 h*
