@@ -29,7 +29,9 @@ Sovellus näyttää hakutulokset. Pysäkin tallentaminen tapahtuu painamalla hak
 Paluu takaisin päänäkymään tapahtuu painamalla 'Return'. 
 
 ## Linjan lisääminen
+
 ### (Add route) 
+
 Kun käyttäjä on tallentanut vähintään yhden pysäkin, on mahdollista tallentaa pysäkkikohtaisia linjoja. Linjan tallentamiseen siirrytään painamalla haluamaansa pysäkkiä.
 
 ![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/addRoute.png) 
