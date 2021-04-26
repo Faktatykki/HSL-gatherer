@@ -118,3 +118,6 @@
 14:00 - 18:00 Dokumentaation päivittämistä 
 
 *Käytetty aika: 4 h*
+ 
+ 
+**Yhteensä:** 65 h 50 min
