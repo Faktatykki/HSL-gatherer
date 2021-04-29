@@ -24,4 +24,4 @@ Perusversion toiminnallisuuksien jälkeen on tarkoitus parantaa käyttäjäkokem
 - [x] Pysäkkikohtaisen tallentamisen lisäksi tallennetun pysäkin kulkuväline-kohtainen tallentaminen 
 - [x] Henkilökohtainen koonti tallennetuista pysäkeistä ja kulkuvälineistä ja niihin liittyvä rajapinnan tarjoama reaaliaikainen tieto 
 - [x] Graafinen käyttöliittymä
-- [ ] Reaaliaikainen tallennettujen reittien aikataulujen päivittäjä  
+- [x] Reaaliaikainen tallennettujen reittien aikataulujen päivittäjä  
