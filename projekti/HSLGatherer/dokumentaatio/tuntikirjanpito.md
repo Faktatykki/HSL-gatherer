@@ -118,6 +118,12 @@
 14:00 - 18:00 Dokumentaation päivittämistä 
 
 *Käytetty aika: 4 h*
- 
- 
-**Yhteensä:** 65 h 50 min
+  
+**29.4** 
+
+11:15 - 15:15 Reaaliaikainen tallennettujen reittien aikataulujen päivittämisominaisuus lisätty. Paljon dokumentaation tutkimista aihetta varten
+16:00 - 19:00 Testikattavuus lähemmäksi 100%
+
+*Käytetty aika: 7 h*
+
+**Yhteensä:** 72 h 50 min
