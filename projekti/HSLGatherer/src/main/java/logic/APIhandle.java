@@ -23,10 +23,6 @@ public class APIhandle {
     public List<String[]> makeHttpRequest(boolean stopQuery, String stop) throws IOException {
         List<String[]> jsonResponse = null;
         
-        if (url == null) {
-            return null;
-        }
-        
         HttpURLConnection urlConnection = null;
         InputStream inputStream = null;
         
@@ -156,14 +152,18 @@ public class APIhandle {
     }
 
     //sekunnit kellonajaksi
-    private String convertSeconds(String s) {
+    public String convertSeconds(String s) {
         int totalSec = Integer.valueOf(s);
 
-        int hours = totalSec / 3600;
-        int minutes = (totalSec % 3600) / 60;
-        int seconds = totalSec % 2;
+        if (totalSec >= 86400) {
+            totalSec = totalSec - 86400;
+        }
+
+        int seconds = totalSec % 60;
+        int hours = totalSec / 60;
+        int minutes = hours % 60;
+        hours = hours / 60;
 
         return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
-
 }

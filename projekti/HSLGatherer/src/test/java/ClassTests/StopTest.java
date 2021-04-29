@@ -25,6 +25,7 @@ public class StopTest {
         assertTrue(s1.equals(s2));
         assertFalse(s1.equals("Kumpulan kampus"));
         assertFalse(s1.equals(t1));
+        assertFalse(s1.equals(null));
     }
 
     @Test

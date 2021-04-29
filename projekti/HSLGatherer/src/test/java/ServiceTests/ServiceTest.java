@@ -1,15 +1,18 @@
-package ServiceTest;
+package ServiceTests;
 
 import classes.Stop;
 import classes.Trip;
+import services.Service;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import services.Service;
+
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.sql.SQLException;
+
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -66,6 +69,23 @@ public class ServiceTest {
 
         assertEquals(stops.size(), 1);
         assertEquals(stops.get(0).getName(), "Hämeenapajantie");
+    }
+
+    //searchForTrips brings whole schedule
+    //searchForRoutes only the general route
+    @Test
+    public void searchForRoutesNoDuplicates() throws IOException {
+        List<Trip> list = s.searchForRoutes("Hämeenapajantie");
+
+        assertEquals(list.size(), 2);
+
+        Trip t1 = list.get(0);
+        Trip t2 = list.get(1);
+
+        assertTrue(t1.getSign().equals(t2.getSign()));
+        assertFalse(t1.getRoute().equals(t2.getRoute()));
+
+        assertEquals(list.size(), 2);
     }
 
     @Test

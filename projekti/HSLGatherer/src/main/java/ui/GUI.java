@@ -1,6 +1,8 @@
 package ui;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -22,6 +24,7 @@ import java.util.Set;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.concurrent.ExecutionException;
 
 public class GUI extends Application {
 
@@ -89,8 +92,7 @@ public class GUI extends Application {
         showStopsButton.setOnAction(e -> {
             try {
                 stage.setScene(showStopsScene());
-            } catch (SQLException exception) {
-            } catch (IOException exception) {
+            } catch (Exception exception) {
             }
         });
         deleteButton.setOnAction(e -> { stage.setScene(deleteMenuScene()); });
@@ -278,7 +280,7 @@ public class GUI extends Application {
         return new Scene(sc);
     }
 
-    public Scene showStopsScene() throws SQLException, IOException {
+    public Scene showStopsScene() throws SQLException, IOException, ExecutionException, InterruptedException {
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.TOP_CENTER);
         layout.setPadding(new Insets(30, 30, 30, 30));
@@ -306,43 +308,65 @@ public class GUI extends Application {
             return new Scene(layout);
         }
 
-        for (String stop: stops) {
-            Text stopName = new Text("STOP: " + stop);
-            stopName.setLineSpacing(20);
+        Text routeLO = new Text();
 
+        Task<Void> task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                while(true) {
+                    StringBuilder sb = new StringBuilder();
 
-            VBox routeLO = new VBox(5);
-            routeLO.setPadding(new Insets(20, 20, 20, 20));
-            routeLO.setAlignment(Pos.CENTER);
+                    Platform.runLater(new Runnable() {
 
-            List<Trip> trips = s.searchForTrips(stop);
+                        @Override
+                        public void run() {
+                            for (String stop : stops) {
 
-            Trip prev = null;
+                                sb.append("\n\nSTOP: " + stop + "\n\n");
 
-            int routeCount = 0;
+                                List<Trip> trips = null;
 
-            for (Trip trip: trips) {
-                if (routes.contains(trip)) {
-                    if (!trip.equals(prev)) {
+                                try {
+                                    trips = s.searchForTrips(stop);
+                                } catch (IOException exception) {
+                                    exception.printStackTrace();
+                                }
 
-                    }
-                    routeLO.getChildren().add(new Text(trip.toString()));
-                    prev = trip;
-                    routeCount++;
+                                Trip prev = null;
+
+                                int routeCount = 0;
+
+                                for (Trip trip : trips) {
+                                    if (routes.contains(trip)) {
+                                        if (!trip.equals(prev)) {
+                                            sb.append("\n");
+                                        }
+                                        sb.append(trip.toString() + "\n");
+                                        prev = trip;
+                                        routeCount++;
+                                    }
+                                }
+
+                                if (routeCount == 0) {
+                                    sb.append("\nNothing saved for " + stop + " yet..\n");
+                                }
+
+                                routeLO.setText(sb.toString());
+                            }
+                        }
+                    });
+                    Thread.sleep(10000);
                 }
             }
+        };
 
-            if(routeCount == 0) {
-                routeLO.getChildren().add(new Text("Nothing saved for " + stop + " yet.."));
-            }
-
-            layout.getChildren().addAll(stopName, routeLO);
-        }
+        Thread th = new Thread(task);
+        th.start();
 
         Button returnButton = new Button("Return");
         returnButton.setPrefWidth(200);
 
-        layout.getChildren().add(returnButton);
+        layout.getChildren().addAll(routeLO, returnButton);
 
         returnButton.setOnAction(e -> { stage.setScene(generalView()); });
 

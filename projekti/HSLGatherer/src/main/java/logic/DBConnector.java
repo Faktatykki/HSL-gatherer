@@ -45,7 +45,6 @@ public class DBConnector {
             stmt.execute("INSERT INTO Stops (name) VALUES ('" + stop + "')");
             saved = true;
         } catch (SQLException e) {
-            System.out.println("\nStop is already saved! Continuing..");
         }
 
         stmt.execute("COMMIT");
@@ -64,7 +63,6 @@ public class DBConnector {
                     "VALUES ('" + sign + "', (SELECT id FROM Stops WHERE name = '" + stop + "'), '" + route + "')");
             saved = true;
         } catch (Exception e) {
-            System.out.println("\nRoute is already saved! Continuing..");
         }
 
         stmt.execute("COMMIT");
