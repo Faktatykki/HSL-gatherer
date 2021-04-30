@@ -26,11 +26,21 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * Graafinen käyttöliittymä
+ */
 public class GUI extends Application {
 
     private Stage stage;
     private Service s;
 
+    /**
+     * Käyttöliittymä suorittaa kaiken sovelluslogiikkaan liittyvän
+     * toiminnallisuuden Service-luokan kautta
+     *
+     * @throws IOException
+     * @throws SQLException
+     */
     public GUI() throws IOException, SQLException {
         this.s = new Service(false);
     }
@@ -44,6 +54,12 @@ public class GUI extends Application {
         primaryStage.show();
     }
 
+    /**
+     * Päänäkymä. Tarjoaa mahdollisuuden ohjelman sulkemiseen ja
+     * eri toiminnallisuuksiin siirtymiseen.
+     *
+     * @return päänäkymäksi rakennetun Scene-olion
+     */
     public Scene generalView() {
         VBox layout = new VBox();
         layout.setPadding(new Insets(20, 20, 20, 20));
@@ -68,6 +84,13 @@ public class GUI extends Application {
         return new Scene(layout);
     }
 
+    /**
+     * Päänäkymän napit ja niihin liittyvät toiminnallisuudet.
+     * Päänäkymästä asetetaan Stage- oliolle kaikkien muiden näkymien
+     * ja metodien palauttamat Scene-oliot.
+     *
+     * @return nappien asetteluun tarkoitetun Parent-olion
+     */
     public Parent generalViewLO() {
         VBox buttonLO = new VBox(10);
         buttonLO.setPadding(new Insets(30, 30, 30, 30));
@@ -102,6 +125,12 @@ public class GUI extends Application {
         return buttonLO;
     }
 
+    /**
+     * Pysäkkien hakuun ja lisäämiseen tarkoitettu näkymä
+     * sekä siihen liittyvät toiminnallisuudet.
+     *
+     * @return pysäkkihakua ja lisäämistä varten rakennettu Scene-olio
+     */
     public Scene addStopScene() {
         VBox layout = new VBox();
         layout.setAlignment(Pos.TOP_CENTER);
@@ -177,6 +206,15 @@ public class GUI extends Application {
         return new Scene(layout);
     }
 
+    /**
+     * Linjojen lisäämiseen tarkoitettu näkymä sekä
+     * siihen liittyvät toiminnallisuudet. Tässä näkymässä
+     * näkee vain valittavat pysäkit, mistä linjan voi valita.
+     *
+     * @return valittavia pysäkkejä varten rakennettu Scene-olio
+     *
+     * @throws SQLException
+     */
     public Scene addRouteScene() throws SQLException {
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.TOP_CENTER);
@@ -222,6 +260,20 @@ public class GUI extends Application {
         return new Scene(layout);
     }
 
+    /**
+     * Linjojen lisäämiseen tarkoitettu näkymä sekä
+     * siihen liittyvät toiminnallisuudet. Tässä näkymässä
+     * voi lisätä linjoja addRouteScene()-metodissa valitulle
+     * pysäkille.
+     *
+     * @param stop addRouteScene()-metodista valittu pysäkki
+     *
+     * @see ui.GUI#addRouteScene()
+     *
+     * @return valittavia linjoja varten rakennettu Scene-olio
+     *
+     * @throws IOException
+     */
     public Scene addRouteSubScene(String stop) throws IOException {
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.TOP_CENTER);
@@ -280,6 +332,19 @@ public class GUI extends Application {
         return new Scene(sc);
     }
 
+    /**
+     * Näyttää käyttäjän tallentamilta pysäkeiltä käyttäjän
+     * tallentamien linjojen aikataulut ja päivittää ne
+     * reaaliaikaisesti.
+     *
+     * @return reaaliaikaisen aikataulujen esittämistä varten
+     * rakennettu Scene-olio
+     *
+     * @throws SQLException
+     * @throws IOException
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
     public Scene showStopsScene() throws SQLException, IOException, ExecutionException, InterruptedException {
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.TOP_CENTER);
@@ -375,6 +440,17 @@ public class GUI extends Application {
         return new Scene(sc);
     }
 
+    /**
+     * Näkymä, jossa valitaan, että haluaako käyttäjä poistaa
+     * tietokantaan tallennettuja pysäkkejä vai linjoja.
+     * Nämä kaksi vaihtoehtoa muodostavat omat näkymänsä.
+     *
+     * @see ui.GUI#deleteStopScene()
+     * @see ui.GUI#deleteRouteScene()
+     *
+     * @return poistamiseen liittyvää valikkoa varten rakennettu
+     * Scene-olio
+     */
     public Scene deleteMenuScene() {
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.TOP_CENTER);
@@ -420,6 +496,18 @@ public class GUI extends Application {
         return new Scene(layout);
     }
 
+    /**
+     * Näkymässä voi poistaa tietokantaan
+     * tallennettuja pysäkkejä. Pysäkin poistaminen poistaa myös
+     * pysäkkiin liittyvät linjat. Näkymään siirrytään
+     * deleteMenuScene()-metodin palauttaman näkymän kautta.
+     *
+     * @see ui.GUI#deleteMenuScene()
+     *
+     * @return pysäkkien poistamista varten rakennettu Scene-olio
+     *
+     * @throws SQLException
+     */
     public Scene deleteStopScene() throws SQLException {
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.TOP_CENTER);
@@ -469,6 +557,17 @@ public class GUI extends Application {
         return new Scene(layout);
     }
 
+    /**
+     * Näkymässä voi poistaa tietokantaan tallennettuja linjoja.
+     * Näkymään siirrytään deleteMenuScene()-metodin palauttaman
+     * näkymän kautta.
+     *
+     * @see ui.GUI#deleteMenuScene()
+     *
+     * @return linjojen poistamista varten rakennettu Scene-olio
+     *
+     * @throws SQLException
+     */
     public Scene deleteRouteScene() throws SQLException {
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.TOP_CENTER);

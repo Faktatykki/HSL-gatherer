@@ -1,5 +1,10 @@
 package classes;
 
+/**
+ * Luokka edustaa rajapinnasta ja tietokannasta saatavia pysäkkitietoja.
+ * Luokkaa luodaan, kun haetaan rajapinnasta tai tietokannasta
+ * pysäkkeihin liittyvää tietoa.
+ */
 public class Stop implements Comparable<Stop> {
 
     private String name;

@@ -5,11 +5,22 @@ import java.io.File;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * Luokka käsittelee kaiken tietokannan ja ohjelman välillä
+ * tapahtuvan kommunikoinnin
+ */
 public class DBConnector {
 
     private Connection db;
     private boolean test;
 
+    /**
+     * Luo yhteyden tietokantaan. Jos true, niin kyseessä on testien ajo.
+     *
+     * @param test true jos kyseessä on testi, muuten ei
+     *
+     * @throws SQLException
+     */
     public DBConnector(boolean test) throws SQLException {
         try {
             if (test) {
@@ -23,6 +34,12 @@ public class DBConnector {
         }
     }
 
+    /**
+     * Luo ohjelman tarvitsemat taulut, eli
+     * taulut pysäkeille ja linjoille.
+     *
+     * @throws SQLException
+     */
     public void createTables() throws SQLException {
 
         Statement stmt = db.createStatement();
@@ -35,6 +52,15 @@ public class DBConnector {
         }
     }
 
+    /**
+     * Lisää Stops-tauluun uuden pysäkin.
+     *
+     * @param stop käyttäjän valitsema pysäkki
+     *
+     * @return true jos lisääminen onnistui, false jos ei
+     *
+     * @throws SQLException
+     */
     public boolean addStop(String stop) throws SQLException {
         Statement stmt = db.createStatement();
         stmt.execute("BEGIN TRANSACTION");
@@ -52,6 +78,17 @@ public class DBConnector {
         return saved;
     }
 
+    /**
+     * Lisää Trips-tauluun uuden käyttäjän valitseman linjan.
+     *
+     * @param sign linjan tunnus
+     * @param route linjan nimi
+     * @param stop pysäkin nimi, mihin viitaten linja tallennetaan
+     *
+     * @return true jos lisääminen onnistui, false jos ei
+     *
+     * @throws SQLException
+     */
     public boolean addTrip(String sign, String route, String stop) throws SQLException {
         Statement stmt = db.createStatement();
         stmt.execute("BEGIN TRANSACTION");
@@ -70,6 +107,13 @@ public class DBConnector {
         return saved;
     }
 
+    /**
+     * Etsii käyttäjän tietokantaan lisäämät pysäkit.
+     *
+     * @return käyttäjän tietokantaan lisäämät pysäkit
+     *
+     * @throws SQLException
+     */
     public ResultSet getSavedStops() throws SQLException {
         ResultSet rs = null;
 
@@ -82,6 +126,13 @@ public class DBConnector {
         return rs;
     }
 
+    /**
+     * Etsii käyttäjän tietokantaan lisäämät linjat.
+     *
+     * @return käyttäjän tietokantaan lisäämät linjat
+     *
+     * @throws SQLException
+     */
     public ResultSet getSavedRoutes() throws SQLException {
         ResultSet rs = null;
 
@@ -94,6 +145,15 @@ public class DBConnector {
         return rs;
     }
 
+    /**
+     * Poistaa parametrina saatavan pysäkin tietokannasta.
+     *
+     * @param stop käyttäjän valitsema poistettava pysäkki
+     *
+     * @return true jos poistaminen onnistui, false jos ei
+     *
+     * @throws SQLException
+     */
     public boolean deleteStop(String stop) throws SQLException {
         Statement stmt = db.createStatement();
         boolean deleted = false;
@@ -108,6 +168,14 @@ public class DBConnector {
         return deleted;
     }
 
+    /**
+     * Poistaa parametrina saatavan linjan tunnuksen ja nimen mukaan
+     * linjan tietokannasta.
+     *
+     * @return true jos poistaminen onnistui, false jos ei
+     *
+     * @throws SQLException
+     */
     public boolean deleteRoute(String sign, String route) throws SQLException {
         Statement stmt = db.createStatement();
         boolean deleted = false;
@@ -121,6 +189,13 @@ public class DBConnector {
         return deleted;
     }
 
+    /**
+     * Poistaa tietokannan, käytössä vain testejä suorittaessa.
+     *
+     * @return true jos poistaminen onnistui, false jos ei
+     *
+     * @throws SQLException
+     */
     public boolean deleteDb() throws SQLException {
         try {
             Statement stmt = db.createStatement();
