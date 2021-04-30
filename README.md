@@ -80,7 +80,7 @@ JavaDoc luodaan komennolla
 mvn javadoc:javadoc
 ```
 Tarkasteltava JavaDoc löytyy avaamalla tiedosto
-target/site/apidocs/index.html
+*target/site/apidocs/index.html*
 
 ### Checkstyle 
 
