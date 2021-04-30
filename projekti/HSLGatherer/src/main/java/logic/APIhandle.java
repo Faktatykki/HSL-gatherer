@@ -22,46 +22,66 @@ public class APIhandle {
     //joka palautetaan listana arrayta
     public List<String[]> makeHttpRequest(boolean stopQuery, String stop) throws IOException {
         List<String[]> jsonResponse = null;
-        
+
         HttpURLConnection urlConnection = null;
         InputStream inputStream = null;
         
         try {
-            urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setRequestMethod("POST");
-            urlConnection.setDoOutput(true);
-            urlConnection.setDoInput(true);
-            urlConnection.setRequestProperty("charset", "utf-8");
-            urlConnection.setRequestProperty("Content-Type", "application/graphql");
+            urlConnection = setConnection(urlConnection);
 
             DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
 
-            String param = null;
+            String param = getParam(stopQuery, stop);
 
-            if (stopQuery) {
-                param = getStops(stop);
-            } else {
-                param = getTrips(stop);
-            }
-
-            wr.writeUTF(param);
-            wr.flush();
-            wr.close();
+            endDataoutput(wr, param);
 
             inputStream = urlConnection.getInputStream();
             jsonResponse = readFromStream(stopQuery, inputStream);
-
         } catch (Exception e) {
         } finally {
-            if (urlConnection != null) {
-                urlConnection.disconnect();
-            }
-            if (inputStream != null) {
-                inputStream.close();
-            }
+            closeConnections(urlConnection, inputStream);
         }
 
         return jsonResponse;
+    }
+
+    public HttpURLConnection setConnection(HttpURLConnection urlConnection) throws IOException {
+        urlConnection = (HttpURLConnection) url.openConnection();
+
+        urlConnection.setRequestMethod("POST");
+        urlConnection.setDoOutput(true);
+        urlConnection.setDoInput(true);
+        urlConnection.setRequestProperty("charset", "utf-8");
+        urlConnection.setRequestProperty("Content-Type", "application/graphql");
+
+        return urlConnection;
+    }
+
+    public void closeConnections(HttpURLConnection urlConnection, InputStream inputStream) throws IOException {
+        if (urlConnection != null) {
+            urlConnection.disconnect();
+        }
+        if (inputStream != null) {
+            inputStream.close();
+        }
+    }
+
+    public void endDataoutput(DataOutputStream wr, String param) throws IOException {
+        wr.writeUTF(param);
+        wr.flush();
+        wr.close();
+    }
+
+    public String getParam(boolean stopQuery, String stop) throws IOException {
+        String param = null;
+
+        if (stopQuery) {
+            param = getStops(stop);
+        } else {
+            param = getTrips(stop);
+        }
+
+        return param;
     }
 
     private String getTrips(String stop) throws IOException {
