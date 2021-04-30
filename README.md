@@ -73,6 +73,14 @@ Komento luo kansioon *target* suoritettavan tiedoston *HSLGatherer-1.0-SNAPSHOT.
 ```
 java -jar HSLGatherer-1.0-SNAPSHOT.jar
 ````
+### JavaDoc
+
+JavaDoc luodaan komennolla
+```
+mvn javadoc:javadoc
+```
+Tarkasteltava JavaDoc löytyy avaamalla tiedosto
+target/site/apidocs/index.html
 
 ### Checkstyle 
 
