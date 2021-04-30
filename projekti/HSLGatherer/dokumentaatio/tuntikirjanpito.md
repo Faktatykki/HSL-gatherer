@@ -121,9 +121,15 @@
   
 **29.4** 
 
-11:15 - 15:15 Reaaliaikainen tallennettujen reittien aikataulujen päivittämisominaisuus lisätty. Paljon dokumentaation tutkimista aihetta varten
+11:15 - 15:15 Reaaliaikainen tallennettujen reittien aikataulujen päivittämisominaisuus lisätty. Paljon dokumentaation tutkimista aihetta varten 
 16:00 - 19:00 Testikattavuus lähemmäksi 100%
 
 *Käytetty aika: 7 h*
 
-**Yhteensä:** 72 h 50 min
+**30.4** 
+
+10:00 - 15:00 JavaDocin luominen. Oman koodin tulkintaa. Pientä päivittelyä sinne tänne 
+
+*Käytetty aika: 5h* 
+
+**Yhteensä:** 77 h 50 min
