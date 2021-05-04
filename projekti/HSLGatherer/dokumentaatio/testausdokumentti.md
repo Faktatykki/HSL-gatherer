@@ -9,8 +9,10 @@ Ohjelmaa on testattu automaattisin yksikkö- ja integraatiotestein JUnitilla. Ma
 [*Stop*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/main/java/classes/Stop.java)- ja [*Trip*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/main/java/classes/Trip.java)-luokkaa on kokeiltu omin testein, vaikka luokkien toiminnallisuus on olennainen osa integraatio- ja yksikkötestauksen toimivuutta. 
 Luokkien *equals*, *hashCode* ja *compareTo*-metodeihin on kiinnitetty erityisesti huomiota, eikä niinkään yksiselitteisiin gettereihin. 
 
-[*Stop-luokan testit*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/ClassTests/StopTest.java) 
-[*Trip-luokan testit*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/ClassTests/TripTest.java)
+[*Stop*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/ClassTests/StopTest.java)-luokan testit. 
+ 
+[*Trip*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/ClassTests/TripTest.java)-luokan testit. 
+
 
 ## Service 
 
@@ -25,9 +27,12 @@ Sovelluslogiikan testaamiseen liittyy olennaisesti integraatiotestausta, mutta p
 [*APIhandler*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/main/java/logic/APIhandle.java)-luokassa tapahtuva "huonojen" hakuparametrien syöttäminen ja [*DBConnector*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/main/java/logic/DBConnector.java)-luokassa ResultSet-tulosten 
 oikeellisuus.
 
-[*Logic-luokan testit*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/LogicTests/LogicTest.java)
-[*APIhandler-luokan testit*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/LogicTests/APIhandleTest.java)
-[*DBConnector-luokan testit*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/LogicTests/DBConnectorTest.java)
+[*Logic*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/LogicTests/LogicTest.java)-luokan testit. 
+ 
+[*APIhandler*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/LogicTests/APIhandleTest.java)-luokan testit. 
+ 
+[*DBConnector*](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/src/test/java/LogicTests/DBConnectorTest.java)-luokan testit. 
+
 
 *DBConnector*-luokan testejä varten luotiin väliaikainen testattava tietokanta, joka testien jälkeen poistuu. 
 
