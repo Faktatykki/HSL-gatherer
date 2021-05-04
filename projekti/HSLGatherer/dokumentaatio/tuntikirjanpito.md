@@ -137,4 +137,6 @@
 10:00 - 15:00 Kuvien ottamisesta, testausdokumentaation luominen, arkkitehtuuri-dokumentaation päivittäminen 
 lopulliseen muotoonsa. Testikattavuuden pohdintaa. 
 
+*Käytetty aika: 5h*
+
 **Yhteensä:** 82 h 50 min
