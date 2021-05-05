@@ -47,7 +47,7 @@ Eri arkkitehtuuritasojen välisiä suhteita kuvaava kaavio:
 
 ## Tiedon talletus 
 
-Pakkauksen *Logic* luokka *DBConnector* hoitaa tietokantaan liittyvät toiminnallisuudet. Ohjelman tarvitseman tiedon pysyväistalletuksen volyymi on verrattain pientä, joten ohjelma käyttää kevyttä *SQLiteä*. Tietokantaan tallennetaan tiedot käyttäjän valitsemista pysäkeistä ja linjoista. Taulujen rakenne on seuraavanlainen: 
+Pakkauksen *logic* luokka *DBConnector* hoitaa tietokantaan liittyvät toiminnallisuudet. Ohjelman tarvitseman tiedon pysyväistalletuksen volyymi on verrattain pientä, joten ohjelma käyttää kevyttä *SQLiteä*. Tietokantaan tallennetaan tiedot käyttäjän valitsemista pysäkeistä ja linjoista. Taulujen rakenne on seuraavanlainen: 
 
 ![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/tables.png) 
 
