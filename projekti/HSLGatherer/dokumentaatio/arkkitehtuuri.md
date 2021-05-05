@@ -21,7 +21,7 @@ Graafinen käyttöliittymä on toteutettu JavaFX:llä ja sisältää karkeasti v
 - Tallennetun pysäkin poistaminen 
 - Tallennetun linjan poistaminen pysäkkikohtaisesti 
 
-Tarkempi kuvaus näkymistä löytyy [käyttöohjeista](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kayttoohje.md). Jokainen näkymistä on toteutettu omana [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html)-oliona. Jokaista Scene-oliota ja sen rakentamista edustaa oma metodi. Metodi rakentaa Scene-olion ja palauttaa sen globaalina muuttujana toimivalle [stage](https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html)-oliolle. 
+Tarkempi kuvaus näkymistä löytyy [käyttöohjeista](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kayttoohje.md). Jokainen näkymistä on toteutettu omana [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html)-oliona. Jokaista Scene-oliota ja sen rakentamista edustaa oma metodi. Metodi rakentaa Scene-olion ja palauttaa sen globaalina muuttujana toimivalle [Stage](https://docs.oracle.com/javase/8/javafx/api/javafx/stage/Stage.html)-oliolle. 
 
 Käyttöliittymä kommunikoi ainoastaan Service-luokan metodien kautta sovelluslogiikan kanssa. Täten sovelluslogiikka on eriytetty käyttöliittymästä. Tarkempi kuvaus toiminnallisuudesta löytyy kohdasta "Päätoiminnallisuudet". 
 
