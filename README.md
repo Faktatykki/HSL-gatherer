@@ -35,7 +35,7 @@ Ohjelma käyttää hyväksi Reittiopaan tarjoamaa avointa rajapintaa kulkuvälin
 
 ## Komentorivitoiminnot 
 
-Kaikki komennot suoritetaan samasta tiedostosijainnista, missä pom.xml sijaitsee.
+Kaikki komennot suoritetaan samasta tiedostosijainnista, missä pom.xml sijaitsee, ellei toisin mainita.
 
 ### Ohjelman suorittaminen
 
@@ -72,7 +72,7 @@ Suoritettavan jarin saa generoitua komennolla:
 ```
 mvn package
 ```
-Komento luo kansioon *target* suoritettavan tiedoston *HSLGatherer-1.0-SNAPSHOT.jar*, joka suoritetaan komennolla: 
+Komento luo kansioon *target* suoritettavan tiedoston *HSLGatherer-1.0-SNAPSHOT.jar*, joka suoritetaan komennolla samasta tiedostosijainnista missä jar-tiedosto sijaitsee (eli ei siellä, missä pom.xml sijaitsee): 
 
 ```
 java -jar HSLGatherer-1.0-SNAPSHOT.jar
