@@ -42,7 +42,7 @@ Käyttöliittymäkerrosta ei oteta huomioon testauksessa. Täten rivikattavuus o
 
 ![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/jacocoreport.png) 
 
-Rivikattavuudesta jää 6% paljolti siksi, että luokkien yksinkertaisimpia gettereitä ei testattu. Haaraumakattavuuden alhaisuus johtuu paljolti siitä, että 
+Rivikattavuudesta jää 5% paljolti siksi, että luokkien yksinkertaisimpia gettereitä ei testattu. Haaraumakattavuuden alhaisuus johtuu paljolti siitä, että 
 testaamatta jäivät tilanteet, joissa tietokantaa ei ole olemassa. 
 
 # Järjestelmätestaus 
