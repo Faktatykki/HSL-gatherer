@@ -333,6 +333,7 @@ public class GUI extends Application {
      */
     public Scene showStopsScene() throws SQLException, IOException, ExecutionException, InterruptedException {
         VBox layout = defaultVBoxLO();
+        layout.setPrefSize(700, 500);
 
         Text title = new Text("SAVED STOPS AND ROUTES");
         title.setStyle("-fx-font-weight: bold");
@@ -403,7 +404,7 @@ public class GUI extends Application {
                             }
                         }
                     });
-                    Thread.sleep(10000);
+                    Thread.sleep(5000);
                 }
             }
         };
