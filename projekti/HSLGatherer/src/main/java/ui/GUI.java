@@ -61,10 +61,7 @@ public class GUI extends Application {
      * @return päänäkymäksi rakennetun Scene-olion
      */
     public Scene generalView() {
-        VBox layout = new VBox();
-        layout.setPadding(new Insets(20, 20, 20, 20));
-        layout.setPrefSize(500, 400);
-        layout.setAlignment(Pos.TOP_CENTER);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("Welcome to HSL-Gatherer");
         title.setStyle("-fx-font-weight: bold");
@@ -92,9 +89,7 @@ public class GUI extends Application {
      * @return nappien asetteluun tarkoitetun Parent-olion
      */
     public Parent generalViewLO() {
-        VBox buttonLO = new VBox(10);
-        buttonLO.setPadding(new Insets(30, 30, 30, 30));
-        buttonLO.setAlignment(Pos.CENTER);
+        VBox buttonLO = defaultVBoxLO();
 
         Button addStopButton = new Button("Add stop");
         addStopButton.setPrefWidth(200);
@@ -132,10 +127,7 @@ public class GUI extends Application {
      * @return pysäkkihakua ja lisäämistä varten rakennettu Scene-olio
      */
     public Scene addStopScene() {
-        VBox layout = new VBox();
-        layout.setAlignment(Pos.TOP_CENTER);
-        layout.setPadding(new Insets(30, 30, 30, 30));
-        layout.setPrefSize(500, 400);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("SEARCH FOR STOPS");
         title.setStyle("-fx-font-weight: bold");
@@ -216,10 +208,7 @@ public class GUI extends Application {
      * @throws SQLException
      */
     public Scene addRouteScene() throws SQLException {
-        VBox layout = new VBox(10);
-        layout.setAlignment(Pos.TOP_CENTER);
-        layout.setPadding(new Insets(30, 30, 30, 30));
-        layout.setPrefSize(500, 400);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("SAVED STOPS");
         title.setStyle("-fx-font-weight: bold");
@@ -275,10 +264,7 @@ public class GUI extends Application {
      * @throws IOException
      */
     public Scene addRouteSubScene(String stop) throws IOException {
-        VBox layout = new VBox(10);
-        layout.setAlignment(Pos.TOP_CENTER);
-        layout.setPadding(new Insets(30, 30, 30, 30));
-        layout.setPrefSize(500, 400);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("STOP: " + stop);
         title.setStyle("-fx-font-weight: bold");
@@ -346,10 +332,7 @@ public class GUI extends Application {
      * @throws InterruptedException
      */
     public Scene showStopsScene() throws SQLException, IOException, ExecutionException, InterruptedException {
-        VBox layout = new VBox(10);
-        layout.setAlignment(Pos.TOP_CENTER);
-        layout.setPadding(new Insets(30, 30, 30, 30));
-        layout.setPrefSize(800, 600);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("SAVED STOPS AND ROUTES");
         title.setStyle("-fx-font-weight: bold");
@@ -452,10 +435,7 @@ public class GUI extends Application {
      * Scene-olio
      */
     public Scene deleteMenuScene() {
-        VBox layout = new VBox(10);
-        layout.setAlignment(Pos.TOP_CENTER);
-        layout.setPadding(new Insets(30, 30, 30, 30));
-        layout.setPrefSize(500, 400);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("Delete routes or stops");
         title.setStyle("-fx-font-weight: bold");
@@ -509,10 +489,7 @@ public class GUI extends Application {
      * @throws SQLException
      */
     public Scene deleteStopScene() throws SQLException {
-        VBox layout = new VBox(10);
-        layout.setAlignment(Pos.TOP_CENTER);
-        layout.setPadding(new Insets(30, 30, 30, 30));
-        layout.setPrefSize(500, 400);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("Saved stops");
         title.setStyle("-fx-font-weight: bold");
@@ -569,10 +546,7 @@ public class GUI extends Application {
      * @throws SQLException
      */
     public Scene deleteRouteScene() throws SQLException {
-        VBox layout = new VBox(10);
-        layout.setAlignment(Pos.TOP_CENTER);
-        layout.setPadding(new Insets(30, 30, 30, 30));
-        layout.setPrefSize(500, 400);
+        VBox layout = defaultVBoxLO();
 
         Text title = new Text("Saved routes");
         title.setStyle("-fx-font-weight: bold");
@@ -617,6 +591,20 @@ public class GUI extends Application {
         layout.getChildren().addAll(title, buttonLO, returnButton);
 
         return new Scene(layout);
+    }
+
+    /**
+     *  Tekee kaikissa näkymissä käytettävän VBoxin perusasettelun
+     *
+     * @return VBoxin, jossa on valmiina kaikissa näkymissä käytettävä komponentin perusasettelu
+     */
+    public VBox defaultVBoxLO() {
+        VBox layout = new VBox(10);
+        layout.setAlignment(Pos.TOP_CENTER);
+        layout.setPadding(new Insets(30, 30, 30, 30));
+        layout.setPrefSize(500, 400);
+
+        return layout;
     }
 
     public static void main(String[] args) {
