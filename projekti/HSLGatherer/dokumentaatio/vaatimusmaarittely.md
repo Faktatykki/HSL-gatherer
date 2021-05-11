@@ -19,9 +19,11 @@ Käyttäjän tallettamia tietoja haluamistaan pysäkeistä talletetaan tietokant
 - [x] Pysäkkikohtaisen tallentamisen lisäksi tallennetun pysäkin kulkuväline-kohtainen tallentaminen 
 - [x] Henkilökohtainen koonti tallennetuista pysäkeistä ja kulkuvälineistä ja niihin liittyvä rajapinnan tarjoama reaaliaikainen tieto 
 - [x] Graafinen käyttöliittymä
-- [x] Reaaliaikainen tallennettujen reittien aikataulujen päivittäjä  
+- [x] Reaaliaikainen tallennettujen linjojen aikataulujen päivittäjä  
 
 ## Jatkokehitys 
 
-Perusversion toiminnallisuuksien jälkeen on tarkoitus parantaa käyttäjäkokemusta seuraavilla toiminnallisuuksilla: 
-- [] 
+Perusversion toiminnallisuuksien voisi parantaa käyttäjäkokemusta seuraavilla toiminnallisuuksilla: 
+- [ ] Interaktiivinen kartta josta valita pysäkkejä tallennettavaksi
+- [ ] Graafisen käyttöliittymän tyylitellympi ulkomuoto
+- [ ] Erillinen näkymä reaaliaikaisille aikatauluille, jota voisi käyttää suuremmalla näytöllä näytettäväksi
