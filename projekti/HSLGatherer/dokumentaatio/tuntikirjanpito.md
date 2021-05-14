@@ -147,9 +147,9 @@ lopulliseen muotoonsa. Testikattavuuden pohdintaa.
 
 **14.5** 
 
-12:00 - 14:00 Varmistukset että kaikki on valmista loppupalautusta varten
+12:00 - 15:00 Varmistukset että kaikki on valmista loppupalautusta varten
 
-*Käytetty aika: 2 h* 
+*Käytetty aika: 3 h* 
 
 
-**Yhteensä:** 87 h 50 min
+**Yhteensä:** 88 h 50 min
