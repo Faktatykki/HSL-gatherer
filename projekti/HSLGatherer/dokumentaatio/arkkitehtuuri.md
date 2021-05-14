@@ -85,7 +85,7 @@ Kaiken toiminnon periaate on käytännössä sama. Käyttäjä kommunikoi ainoas
 
 ### Käyttöliittymä 
 
-Graafisen käyttöliittymän vahvuus on näkymien jako metodeiksi, mutta metodit sisältävät toisiin metodeihin nähden paljon toisteista koodia. Toisteista koodia löytyy erityisen paljon asettelun ja eri komponenttien koon suhteen. Tämän voisi korvata luomalla asettelua varten oman metodin, jota kutsumalla eri näkymien komponenttien asettelut olisivat identtiset toisten näkymien välillä. Tästä syystä metodien pituudet ovat todella pitkiä ja täten vaikuttaa koodin ymmärrettävyyteen. 
+Graafisen käyttöliittymän vahvuus on näkymien jako metodeiksi, mutta metodit sisältävät toisien luokkien metodeihin nähden paljon toisteista koodia. Tästä syystä metodien pituudet ovat todella pitkiä ja täten vaikuttaa koodin ymmärrettävyyteen. 
 
 ### Logiikan ja palveluluokan välinen suhde 
 
