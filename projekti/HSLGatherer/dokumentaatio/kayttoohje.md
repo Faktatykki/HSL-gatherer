@@ -56,7 +56,7 @@ Paluu takaisin päänäkymään tapahtuu painamalla 'Return'.
 
 ### (Show saved stops and routes)
 
-Käyttäjä näkee kaikki tallentamansa pysäkit ja linjat. Linjoista näkee lähtöajan ja mahdollisen viivästyksen. Koonti näyttää kaikki tallennetut linjat pysäkkikohtaisesti. 
+Käyttäjä näkee kaikki tallentamansa pysäkit ja linjat. Linjoista näkee lähtöajan ja mahdollisen viivästyksen. Koonti näyttää kaikki tallennetut linjat pysäkkikohtaisesti ja niiden reaaliaikaiset aikataulut. Aikataulut päivittyvät koko ajan automaattisesti.
 
 ![alt text](https://github.com/Faktatykki/ot-harjoitustyo/blob/master/projekti/HSLGatherer/dokumentaatio/kuvat/savedRoutes.png)
 
