@@ -33,6 +33,8 @@ Ohjelma käyttää hyväksi Reittiopaan tarjoamaa avointa rajapintaa kulkuvälin
 
 [Viikon 6 release](https://github.com/Faktatykki/ot-harjoitustyo/releases/tag/viikko6)
 
+[Viikon 7 release (loppupalautus)] (https://github.com/Faktatykki/ot-harjoitustyo/releases/tag/loppupalautus)
+
 ## Komentorivitoiminnot 
 
 Kaikki komennot suoritetaan samasta tiedostosijainnista, missä pom.xml sijaitsee, ellei toisin mainita.
