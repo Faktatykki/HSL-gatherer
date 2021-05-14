@@ -130,13 +130,26 @@
 
 10:00 - 15:00 JavaDocin luominen. Oman koodin tulkintaa. Pientä päivittelyä sinne tänne 
 
-*Käytetty aika: 5h* 
+*Käytetty aika: 5 h* 
 
 **4.5** 
 
 10:00 - 15:00 Kuvien ottamisesta, testausdokumentaation luominen, arkkitehtuuri-dokumentaation päivittäminen 
 lopulliseen muotoonsa. Testikattavuuden pohdintaa. 
 
-*Käytetty aika: 5h*
+*Käytetty aika: 5 h*
 
-**Yhteensä:** 82 h 50 min
+**11.5** 
+
+11:00 - 14:00 Käyttöliittymän koodin selventämistä ja dokumentaation päivittelyä
+
+*Käytetty aika: 3 h*
+
+**14.5** 
+
+12:00 - 14:00 Varmistukset että kaikki on valmista loppupalautusta varten
+
+*Käytetty aika: 2 h* 
+
+
+**Yhteensä:** 87 h 50 min
